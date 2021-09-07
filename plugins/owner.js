@@ -42,7 +42,7 @@ else if (Config.WORKTYPE == 'public') {
         }
 
         if (Config.OWNRN == 'default') {
-            await message.client.sendMessage(message.jid,'Jimbrootan created by *Mikhaiel*' , MessageType.text);
+            await message.client.sendMessage(message.jid,'ElsaMowl created by *JIHAD*' , MessageType.text);
         }
         else {
             await message.client.sendMessage(message.jid,Config.OWNRN + '\n\n--------------------', MessageType.text);
