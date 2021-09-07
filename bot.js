@@ -1,6 +1,7 @@
-/* Copyright (C) 2020 Yusuf Usta.
-RECODDED BY AFNANPPLK
-Plk  
+/* Copyright (C) 2020 MIKHAIEL.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+WhatsAsena - jimbrootan
 */
 
 const fs = require("fs");
@@ -8,8 +9,8 @@ const path = require("path");
 const events = require("./events");
 const chalk = require('chalk');
 const config = require('./config');
-const {WAConnection, MessageType, Presence} = require('@adiwajshing/baileys');
-const {Message, StringSession, Image, Video} = require('./whatsasena/');
+const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
+const {Message, StringSession, Image, Video} = require('./ElsaMowl/');
 const { DataTypes } = require('sequelize');
 const { getMessage } = require("./plugins/sql/greetings");
 const got = require('got');
@@ -82,7 +83,7 @@ async function whatsAsena () {
 
     conn.on ('credentials-updated', async () => {
         console.log(
-            chalk.blueBright.italic('✅ Login information updated!')
+            chalk.blueBright.italic('Login information updated!☑️')
         );
 
         const authInfo = conn.base64EncodedAuthInfo();
@@ -96,18 +97,17 @@ async function whatsAsena () {
     conn.on('connecting', async () => {
         console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('Asena')}
 ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
-
 ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
     });
     
 
     conn.on('open', async () => {
         console.log(
-            chalk.green.bold('✅ Login successful!')
+            chalk.green.bold('Login successful!👰')
         );
 
         console.log(
-            chalk.blueBright.italic('⬇️ Installing external plugins...')
+            chalk.blueBright.italic('👰 Installing external plugins...')
         );
 
         var plugins = await plugindb.PluginDB.findAll();
@@ -123,7 +123,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
         });
 
         console.log(
-            chalk.blueBright.italic('⬇️  Installing plugins...')
+            chalk.blueBright.italic('👰  Installing plugins...')
         );
 
         fs.readdirSync('./plugins').forEach(plugin => {
@@ -133,7 +133,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
         });
 
         console.log(
-            chalk.green.bold('Pinky bot working perfectly 👻')
+            chalk.green.bold('ElsaMowl working! 👰')
         );
     });
     
@@ -147,27 +147,48 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
             await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
         }
 
-        if (msg.messageStubType === 32 || msg.messageStubType === 28) {
-            // Görüşürüz Mesajı
-            var gb = await getMessage(msg.key.remoteJid, 'goodbye');
-            if (gb !== false) {
-                let pp
-                try { pp = await conn.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await conn.getProfilePicture(); }
-                await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
-                await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message }); });
+      if (config.WELCOME == 'pp' || config.WELCOME == 'Pp' || config.WELCOME == 'PP' || config.WELCOME == 'pP' ) {
+            if (msg.messageStubType === 32 || msg.messageStubType === 28) {
+                    // Thanks to Lyfe
+                    var gb = await getMessage(msg.key.remoteJid, 'goodbye');
+                    if (gb !== false) {
+                        let pp
+                        try { pp = await conn.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await conn.getProfilePicture(); }
+                        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
+                        await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message }); });
+                    }
+                    return;
+                } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
+                    // welcome
+                    var gb = await getMessage(msg.key.remoteJid);
+                    if (gb !== false) {
+                       let pp
+                        try { pp = await conn.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await conn.getProfilePicture(); }
+                        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
+                        await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message }); });
+                    }
+                    return;
+                }
             }
-            return;
-        } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
-            // Hoşgeldin Mesajı
-            var gb = await getMessage(msg.key.remoteJid);
-            if (gb !== false) {
-               let pp
-                try { pp = await conn.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await conn.getProfilePicture(); }
-                await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
-                await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message }); });
-            }
-            return;
-        }
+            else if (config.WELCOME == 'gif' || config.WELCOME == 'Gif' || config.WELCOME == 'GIF' || config.WELCOME == 'GIf' ) {
+            if (msg.messageStubType === 32 || msg.messageStubType === 28) {
+                    // Thanks to ichus-Sophia
+                    var gb = await getMessage(msg.key.remoteJid, 'goodbye');
+                    if (gb !== false) {
+                        var sewqueenimage = await axios.get(config.BYE_GIF, { responseType: 'arraybuffer' })
+                        await conn.sendMessage(msg.key.remoteJid, Buffer.from(sewqueenimage.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message});
+                    }
+                    return;
+                } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
+                    // Thanks to Ravindu Manoj
+                    var gb = await getMessage(msg.key.remoteJid);
+                    if (gb !== false) {
+                    var sewqueenimage = await axios.get(config.WEL_GIF, { responseType: 'arraybuffer' })
+                    await conn.sendMessage(msg.key.remoteJid, Buffer.from(sewqueenimage.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message});
+                    }
+                    return;
+                }
+             }
 
         events.commands.map(
             async (command) =>  {
@@ -183,14 +204,14 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
 
                 if ((command.on !== undefined && (command.on === 'image' || command.on === 'photo')
                     && msg.message && msg.message.imageMessage !== null && 
-                    (command.pattern === undefined || (command.pattern !== undefined && 
-                        command.pattern.test(text_msg)))) || 
+                    (command.pattern === undefined || (command.pattern !== undefined && 
+                        command.pattern.test(text_msg)))) || 
                     (command.pattern !== undefined && command.pattern.test(text_msg)) || 
                     (command.on !== undefined && command.on === 'text' && text_msg) ||
                     // Video
                     (command.on !== undefined && (command.on === 'video')
                     && msg.message && msg.message.videoMessage !== null && 
-                    (command.pattern === undefined || (command.pattern !== undefined && 
+                    (command.pattern === undefined || (command.pattern !== undefined && 
                         command.pattern.test(text_msg))))) {
 
                     let sendMsg = false;
@@ -198,7 +219,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                         
                     if ((config.SUDO !== false && msg.key.fromMe === false && command.fromMe === true &&
                         (msg.participant && config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.SUDO || config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.SUDO)
-                    ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
+                    ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
                         if (command.onlyPinned && chat.pin === undefined) return;
                         if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
                         else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
@@ -237,7 +258,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                             await command.function(whats, match);
                         } catch (error) {
                             if (config.LANG == 'TR' || config.LANG == 'AZ') {
-                                await conn.sendMessage(conn.user.jid, '-- HATA RAPORU [WHATSASENA] --' + 
+                                await conn.sendMessage(conn.user.jid, '-- HATA RAPORU [```Jimbrootan V-2.0```] --' + 
                                     '\n*WhatsAsena bir hata gerçekleşti!*'+
                                     '\n_Bu hata logunda numaranız veya karşı bir tarafın numarası olabilir. Lütfen buna dikkat edin!_' +
                                     '\n_Yardım için Telegram grubumuza yazabilirsiniz._' +
@@ -245,8 +266,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                                     'Gerçekleşen Hata: ' + error + '\n\n'
                                     , MessageType.text);
                             } else {
-                                await conn.sendMessage(conn.user.jid, 'PINKYBOT_🐱_[error] ' +
-                                    '\n\n*👻 ' + error + '*\n'
+                                await conn.sendMessage(conn.user.jid, '👰______```ElsaMowl-V2.1```_____👰' +
+                                    '\n\n*👰 ' + error + '*\n'
                                     , MessageType.text);
                             }
                         }
