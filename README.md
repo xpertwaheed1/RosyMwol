@@ -52,7 +52,7 @@ Click WA logo for Support ðŸ‘‡
 
   ### Simple Method
   
-[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@Mikhaiel/Jimbrootan)
+[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@JihadSabeena123/ElsaMwol)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/J-I-H-A-D/ElsaMwol-V2.1)
      </div>
@@ -83,8 +83,8 @@ $ node qr.js
 ```js
 SETUP
 
-$ git clone https://github.com/J-I-H-A-D/ElsaMwolV2.1
-$ cd ElsaMwolV2.1
+$ git clone https://github.com/J-I-H-A-D/ElsaMwol-V2.1
+$ cd ElsaMwol-V2.1
 $ chmod +x *
 $ npm i
 $ node qr.js
