@@ -1,6 +1,6 @@
 {
-    "name": "ElsaMowl-V2.1",
-    "description": "ELSAMWOL V-2.1 - re-edited from asena. World’s first UserBot made for WhatsApp.",
+    "name": "ElsaMwol-V2.1",
+    "description": "ElsaMwol V-2.1 - re-edited from asena. World’s first UserBot made for WhatsApp.",
     "logo": "https://user-images.githubusercontent.com/85656190/131213201-6f5a608f-ae16-449a-aa5c-9e02f860ccfe.jpg",
     "keywords": ["whatsapp", "userbot", "Asena", "WhatsAsena", "bot", "api", "ai"],
     "repository": "https://github.com/J-I-H-A-D/ElsaMwolV2.1",
@@ -8,7 +8,7 @@
     "success_url": "under maintenance",
     "stack": "container",
     "env": {
-        "ElsaMowl_SESSION": {
+        "ElsaMwol_SESSION": {
             "description": "Qr.Js Type here yours Asena Session.",
             "required": true
         },
