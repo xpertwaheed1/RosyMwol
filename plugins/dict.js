@@ -1,145 +1,219 @@
-/* Codded by @phaticusthiccy
-re-edited by afnanplk
-PINKY V2
+/* Copyright (C) 2021 Vai838.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+WhatsAsenaDuplicated
 */
-
 const Asena = require('../events');
-const {MessageType,Mimetype} = require('@adiwajshing/baileys');
-const fs = require('fs');
-const ffmpeg = require('fluent-ffmpeg');
-const {execFile} = require('child_process');
-const cwebp = require('cwebp-bin');
-const Config = require('../config');
+const {MessageType} = require('@adiwajshing/baileys');
+/*const got = require('got');
+const fs = require('fs');*/
+const axios = require('axios');
 
 const Language = require('../language');
-const Lang = Language.getString('ffmpeg');
+const Lang = Language.getString('weather');
+const { errorMessage, infoMessage } = require('../helpers');
 
-if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'ffmpeg ?(.*)', fromMe: true, desc: Lang.FF_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'lngcode', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
-        if (match[1] === '') return await message.client.sendMessage(message.jid,'Need Media and Filter Name!\nℹ️ Ex: ```.ffmpeg fade=in:0:30```\nℹ️ Ex: ```.ffmpeg curves=vintage, fps=fps=25```', MessageType.text);
-        if (message.reply_message.video) {
+    await message.sendMessage('*Code:* en_US \n *Language:* English (US) \n\n *Code:* hi \n *Language:* Hindi \n\n *Code:* es \n *Language:* Spanish \n\n *Code:* fr \n *Language:* French \n\n *Code:* ja \n *Language:* Japanese \n\n *Code:* ru \n *Language:* Russian \n\n *Code:* en_GB \n *Language:* English (UK) \n\n *Code:* de \n *Language:* German \n\n *Code:* it \n *Language:* Italian \n\n *Code:* ko \n *Language:* Korean \n\n *Code:* pt-BR \n *Language:* Brazilian Portuguese \n\n *Code:* ar \n *Language:* Arabic \n\n *Code:* tr \n *Language:* Turkish \n\n');
 
-            var downloading = await message.client.sendMessage(message.jid,Lang.FF_PROC,MessageType.text);
-            var location = await message.client.downloadAndSaveMediaMessage({
-                key: {
-                    remoteJid: message.reply_message.jid,
-                    id: message.reply_message.id
-                },
-                message: message.reply_message.data.quotedMessage
-            });
+}));
 
-            ffmpeg(location)
-                .videoFilters(`${match[1]}`)
-                .format('mp4')
-                .save('output.mp4')
-                .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: Config.JINN});
-                });
-            return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
+
+
+/*Asena.addCommand({pattern: 'dict ?(.*)', fromMe: false,  dontAddCommandList: true }, async (message, match) => {
+	if (match[1] === '') return await message.reply("Need word to translate");
+       if (match[1].includes(';')) {
+        var split = match[1].split(';');
+        word = split[1];
+        langcode = split[0];
+         }
+	else {
+        word = match[1];
+        langcode = 'en_US';
         }
-        else if (message.reply_message.video === false && message.reply_message.image) {
+       const url = `https://api.dictionaryapi.dev/api/v2/entries/${langcode}/${word}`;
+	try {
+		const response = await got(url);
+		const json = JSON.parse(response.body);
+	       if (response.statusCode === 200) return await message.client.sendMessage(message.jid, 
+		'* ' + "Word:" +'* ```' + json[0].word + '```\n' + 
+		'* ' + "Phonetics:" +'* ```' + json[0].phonetics[0].text + '```\n\n' + 
+                '* ' + "Part of Speech:" +'* ```' + json.result[0][0].partOfSpeech + '```\n' + 
+		'* ' + "Definition 1:" +'* ```' + json[0].meanings[0].definitions[0].definition + '```\n' +                                                                          
+                '* ' + "Synonyms:" +'* ```' + json[0].meanings[0].definitions[0].synonyms[0] + '```\n' + 
+                '* ' + "-" +'* ```' + json[0].meanings[0].definitions[0].synonyms[1] + '```\n' + 
+                '* ' + "-" +'* ```' + json[0].meanings[0].definitions[0].synonyms[2] + '```\n' +  
+                '* ' + "Usage:" +'* ```' + json[0].meanings[0].definitions[0].example + '```\n\n' +                                                                            
+	 	'* ' + "Definition 2:" +'* ```' + json[0].meanings[0].definitions[1].definition + '```\n' +                                                                          
+ 	        '* ' + "Usage:" +'* ```' + json[0].meanings[0].definitions[1].example + '```\n\n\n' + 
+                '* ' + "Part of Speech:" +'* ```' + json[0].meanings[1].partOfSpeech + '```\n\n' + 
+		'* ' + "Definition :" +'* ```' + json[0].meanings[0].definitions[0].definition + '```\n' +                                                                          
+                '* ' + "Synonyms:" +'* ```' + json[0].meanings[0].definitions[0].synonyms[0] + '```\n' + 
+                '* ' + "-" +'* ```' + json[0].meanings[0].definitions[0].synonyms[1] + '```\n' +  
+                '* ' + "Usage:" +'* ```' + json[0].meanings[0].definitions[0].example + '```\n\n', MessageType.text);
+	} catch {
+		return await message.client.sendMessage(message.jid, "error", MessageType.text);
+	}
+});
+*/
 
-            var downloading = await message.client.sendMessage(message.jid,Lang.FF_PROC,MessageType.text);
-            var location = await message.client.downloadAndSaveMediaMessage({
-                key: {
-                    remoteJid: message.reply_message.jid,
-                    id: message.reply_message.id
-                },
-                message: message.reply_message.data.quotedMessage
-            });
 
-            ffmpeg(location)
-                .videoFilters(`${match[1]}`)
-                .save('output.jpg')
-                .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: Config.JINN});
-                });
-            return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
+
+/*Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: false, desc: "Use it as a dictionary.\nEg: .dict en_US;lead\n For supporting languages send *.lngcode*" }, async (message, match) => {
+    if (!match[1]) return await message.sendMessage(errorMessage("Need word"))
+ if (match[1].includes(';')) {
+        var split = match[1].split(';');
+        word = split[1];
+        langcode = split[0];
+         }
+	else {
+        word = match[1];
+        langcode = 'en_US';
         }
-        else {
-            var downloading = await message.client.sendMessage(message.jid,Lang.FF_PROC,MessageType.text);
-            var location = await message.client.downloadAndSaveMediaMessage({
-                key: {
-                    remoteJid: message.reply_message.jid,
-                    id: message.reply_message.id
-                },
-                message: message.reply_message.data.quotedMessage
-            });
+    await message.sendMessage(infoMessage("Loading"))
+	
+   for (var i = 0; i < 5 ; i++) {
+	  
+    await axios
+      .get(`https://api.dictionaryapi.dev/api/v2/entries/${langcode}/${word}`)
+      .then(async (response) => {
+        const {
+         definition,
+	example,	
+        } = response.data[i].meanings[i].definitions[i]
+   
+	
+	const msg = `
+        *${"Definition"}*: ${definition}    
+        *${"Example"}*: ${example}`
+	
+	 await message.client.sendMessage(message.jid, msg , MessageType.text, {
+          quoted: message.data,
+        })
+     })
+      .catch(
+        async (err) => await message.sendMessage(""),
+      )}
+  },
+)
+*/
 
-            ffmpeg(location)
-                .audioFilters(`${match[1]}`)
-                .save('output.mp3')
-                .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio});
-                });
-            return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
+Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: false, desc: "Use it as a dictionary.\nEg: .dict en_US;lead\n For supporting languages send *.lngcode*" }, async (message, match) => {
+
+    if (!match[1]) return await message.sendMessage(errorMessage("Need word"))
+
+ if (match[1].includes(';')) {
+        var split = match[1].split(';');
+        word = split[1];
+        langcode = split[0];
+         }
+	else {
+        word = match[1];
+        langcode = 'en_US';
         }
-    }));
-}
-else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'ffmpeg ?(.*)', fromMe: false, desc: Lang.FF_DESC}, (async (message, match) => {
+    await message.sendMessage(infoMessage("Loading"))
 
-        if (match[1] === '') return await message.client.sendMessage(message.jid,'Need Media and Filter Name!\nℹ️ Ex: ```.ffmpeg fade=in:0:30```\nℹ️ Ex: ```.ffmpeg curves=vintage, fps=fps=25```', MessageType.text);
-        if (message.reply_message.video) {
+	  
+    await axios
+      .get(`https://api.dictionaryapi.dev/api/v2/entries/${langcode}/${word}`)
+      .then(async (response) => {
+        const {
+         definition,
+	example,	
+        } = response.data[0].meanings[0].definitions[0]
 
-            var downloading = await message.client.sendMessage(message.jid,Lang.FF_PROC,MessageType.text);
-            var location = await message.client.downloadAndSaveMediaMessage({
-                key: {
-                    remoteJid: message.reply_message.jid,
-                    id: message.reply_message.id
-                },
-                message: message.reply_message.data.quotedMessage
-            });
+   
+	
+	const msg = `
+        *${"Definition"}*: ${definition}    
+        *${"Example"}*: ${example}`
+	
+	 await message.client.sendMessage(message.jid, msg , MessageType.text, {
+          quoted: message.data,
+        })
+	})    
+	    
+	    
+    await axios
+      .get(`https://api.dictionaryapi.dev/api/v2/entries/${langcode}/${word}`)
+      .then(async (response) => {
+        const {
+         definition,
+	example,	
+        } = response.data[0].meanings[0].definitions[1]
 
-            ffmpeg(location)
-                .videoFilters(`${match[1]}`)
-                .format('mp4')
-                .save('output.mp4')
-                .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: Config.JINN});
-                });
-            return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-        }
-        else if (message.reply_message.video === false && message.reply_message.image) {
+   
+	
+	const msg = `
+        *${"Definition"}*: ${definition}    
+        *${"Example"}*: ${example}`
+	
+	 await message.client.sendMessage(message.jid, msg , MessageType.text, {
+          quoted: message.data,
+        })
+	 })
+	
+	     await axios
+      .get(`https://api.dictionaryapi.dev/api/v2/entries/${langcode}/${word}`)
+      .then(async (response) => {
+        const {
+         definition,
+	example,	
+        } = response.data[0].meanings[1].definitions[0]
 
-            var downloading = await message.client.sendMessage(message.jid,Lang.FF_PROC,MessageType.text);
-            var location = await message.client.downloadAndSaveMediaMessage({
-                key: {
-                    remoteJid: message.reply_message.jid,
-                    id: message.reply_message.id
-                },
-                message: message.reply_message.data.quotedMessage
-            });
+   
+	
+	const msg = `
+        *${"Definition"}*: ${definition}    
+        *${"Example"}*: ${example}`
+	
+	 await message.client.sendMessage(message.jid, msg , MessageType.text, {
+          quoted: message.data,
+        })
+	})    
+		     
+	 await axios
+      .get(`https://api.dictionaryapi.dev/api/v2/entries/${langcode}/${word}`)
+      .then(async (response) => {
+        const {
+         definition,
+	example,	
+        } = response.data[0].meanings[1].definitions[1]
 
-            ffmpeg(location)
-                .videoFilters(`${match[1]}`)
-                .save('output.jpg')
-                .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: Config.JINN});
-                });
-            return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-        }
-        else {
-            var downloading = await message.client.sendMessage(message.jid,Lang.FF_PROC,MessageType.text);
-            var location = await message.client.downloadAndSaveMediaMessage({
-                key: {
-                    remoteJid: message.reply_message.jid,
-                    id: message.reply_message.id
-                },
-                message: message.reply_message.data.quotedMessage
-            });
+   
+	
+	const msg = `
+        *${"Definition"}*: ${definition}    
+        *${"Example"}*: ${example}`
+	
+	 await message.client.sendMessage(message.jid, msg , MessageType.text, {
+          quoted: message.data,
+        })    
+	})    
+		 
+		  await axios
+      .get(`https://api.dictionaryapi.dev/api/v2/entries/${langcode}/${word}`)
+      .then(async (response) => {
+        const {
+         definition,
+	example,	
+        } = response.data[1].meanings[0].definitions[0]
 
-            ffmpeg(location)
-                .audioFilters(`${match[1]}`)
-                .save('output.mp3')
-                .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio});
-                });
-            return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-        }
-    }));
-    
-}
+   
+	
+	const msg = `
+        *${"Definition"}*: ${definition}    
+        *${"Example"}*: ${example}`
+	
+	 await message.client.sendMessage(message.jid, msg , MessageType.text, {
+          quoted: message.data,
+        })
+	    
+
+      })
+      
+  },
+)
