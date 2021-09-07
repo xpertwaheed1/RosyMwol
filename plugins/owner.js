@@ -1,8 +1,7 @@
 /* Copyright (C) 2021 AFNAN PALLIKKEL
-CODDED AFNAN PALLIKKEL
+Re-CODDED BY MIKHAIEL
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-PINKY
 */
 
 const Asena = require('../events');
@@ -24,11 +23,11 @@ if (Config.WORKTYPE == 'private') {
             return;
         }
 
-        if (Config.PLK == 'default') {
-            await message.client.sendMessage(message.jid,'Pinky Bot created by *Afnan pallikkel*' , MessageType.text);
+        if (Config.OWNRN == 'default') {
+            await message.client.sendMessage(message.jid,'Jimbrootan created by *Mikhaiel*' , MessageType.text);
         }
         else {
-            await message.client.sendMessage(message.jid,Config.PLK + '\n\n---------------------', MessageType.text);
+            await message.client.sendMessage(message.jid,Config.OWNRN + '\n\n---------------------', MessageType.text);
         }
     }));
 }
@@ -42,11 +41,11 @@ else if (Config.WORKTYPE == 'public') {
             return;
         }
 
-        if (Config.PLK == 'default') {
-            await message.client.sendMessage(message.jid,'Pinky Bot created by *Afnan pallikkel*' , MessageType.text);
+        if (Config.OWNRN == 'default') {
+            await message.client.sendMessage(message.jid,'Jimbrootan created by *Mikhaiel*' , MessageType.text);
         }
         else {
-            await message.client.sendMessage(message.jid,Config.PLK + '\n\n--------------------', MessageType.text);
+            await message.client.sendMessage(message.jid,Config.OWNRN + '\n\n--------------------', MessageType.text);
         }
     }));
 }
