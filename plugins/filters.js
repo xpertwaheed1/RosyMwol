@@ -123,7 +123,7 @@ await message.client.sendMessage(message.jid, fs.readFileSync('./Media/uploads/t
         if (!!message.mention && message.mention[0] == Config.TAGM) {
 await message.client.sendMessage(message.jid, fs.readFileSync('./Media/uploads/mention.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,contextInfo: { forwardingScore: 10, isForwarded: true }, quoted : message.data, ptt: true})
         }
-const array = ['Elsa','alive','Podi']
+const array = ['Elsa','alive','Podi','song','Jihad,'Poli']
 array.map( async (a) => {
 let pattern = new RegExp(`\\b${a}\\b`, 'g');
 if(pattern.test(message.message)){
@@ -183,7 +183,7 @@ Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
     if (!!message.mention && message.mention[0] == '917736703116@s.whatsapp.net') {
 await message.client.sendMessage(message.jid, fs.readFileSync('./Media/stickers/mention.webp'), MessageType.sticker, { mimetype: Mimetype.webp,contextInfo: { forwardingScore: 10, isForwarded: true }, quoted : message.data, ptt: false})
     }
-const array = ['Elsa','help','alive']
+const array = ['Elsa','help','alive',]
 array.map( async (a) => {
 let pattern = new RegExp(`\\b${a}\\b`, 'g');
 if(pattern.test(message.message)){
