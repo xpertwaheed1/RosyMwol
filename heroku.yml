@@ -1,5 +1,0 @@
-build:
-  docker:
-      worker: /RosyMwol/Dockerfile
-run:
-   worker: npm start
