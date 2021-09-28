@@ -76,7 +76,7 @@
         },
         "heroku": {
             "RESTART_DESC": "Restart ElsaMwol V2.1",
-            "RESTART_MSG": "ʀᴇsᴛᴀʀᴛɪɴɢ  ᴇʟsᴀ ᴍᴡᴏʟ🦄",
+            "RESTART_MSG": " *RESTARTING ROSYMWOL* ",
             "SHUTDOWN_DESC": "Shutdown ElsaMwol",
             "SHUTDOWN_MSG": "𝚂𝚑𝚞𝚝𝚝𝚒𝚗𝚐 𝚍𝚘𝚠𝚗 😖",
             "DYNO_DESC": "Check heroku dyno usage",
@@ -225,14 +225,14 @@
         },
         "updater": {
             "UPDATER_DESC": "Checks the update.",
-            "UPDATE": "```ElsaMwol 😜 completely up-to-date!```",
-            "NEW_UPDATE": "```New update available for ElsaMwol 😌!```\n\nChanges:\n```",
+            "UPDATE": "```RosyMwol 😜 completely up-to-date!```",
+            "NEW_UPDATE": "```New update available for RosyMwol 😉!```\n\nChanges:\n```",
             "UPDATE_NOW_DESC": "It makes updates.",
             "UPDATING": "```Updating...👻```",
             "INVALID_HEROKU": "*❌ Your Heroku app name or api key wrong!*",
             "UPDATED": "*✅  Updated!*",
             "UPDATED_LOCAL": "*✅ Updated!*",
-            "AFTER_UPDATE": "```ElsaMwol 🍭 Restarting !```",
+            "AFTER_UPDATE": "```RosyMwol 🤗 Restarting !```",
             "IN_AF": "*Please check* ```HEROKU_APP_NAME``` *and* ```app name``` *They must be same.*\n*If these two values ​​are the same, please restore* ```HEROKU_API_KEY```\n\n_To access these settings, use Heroku >> App >> Settings >> Reavel Config Vars_\n_To renew your API key, follow these steps, Heroku >> Account >> API Key then replace old api key in config vars._"
         },
         "whois": {
