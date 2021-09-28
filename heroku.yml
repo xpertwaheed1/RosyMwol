@@ -1,0 +1,5 @@
+build:
+  docker:
+      worker: /ElsaMwol/Dockerfile
+run:
+   worker: npm start
