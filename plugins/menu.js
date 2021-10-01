@@ -10,17 +10,11 @@ const fs = require('fs');
 const Config = require('../config')
 
 
- Asena.addCommand({ pattern: 'newb ?(.*)', fromMe: true, desc: 'Test button and list Message' }, (async (message, match) => {
-
-    const rows = [
-        { title: 'Menu Test', description: "kali pulla test", rowId: "rowid1" },
-        { title: 'no', description: "sugam alla", rowId: "rowid2" }
-    ]
-    const sections = [{ title: "Section 1", rows: rows }]
+ Asena.addCommand({ pattern: 'menu ?(.*)', fromMe: false, desc: 'Test button and list Message' }, (async (message, match) => {
 
     const button = {
         buttonText: 'Click Here!',
-        description: "Test Version",
+        description: "menu test",
         sections: sections,
         listType: 1
     }
