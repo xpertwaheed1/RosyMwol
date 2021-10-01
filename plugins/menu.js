@@ -1,10 +1,11 @@
   
-let levelling = require('../lib/levelling')
-let { MessageType } = require('@adiwajshing/baileys')
-let fs = require('fs')
-let path = require('path')
-let fetch = require('node-fetch')
-let moment = require('moment-timezone')
+const Asena = require('../events');
+const {MessageType} = require('@adiwajshing/baileys');
+const exec = require('child_process').exec;
+const os = require("os");
+const fs = require('fs');
+const Config = require('../config')
+
 const defaultMenu = {
   before: `
 ┌─〔 %me 〕
@@ -12,7 +13,7 @@ const defaultMenu = {
 ├ Date: *%date*
 ├ Time: *%time*
 │
-├ Github:SudoAnirudh
+├ Github:DEVILSER
 ├ 
 └────
 %readmore`.trimStart(),
@@ -159,7 +160,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
           "title": `${ucapan()}, ${name}`.trim(),
-          "description": "© Eva",
+          "description": "© Rosy",
           "buttonText": "Click  Here",
           "listType": "SINGLE_SELECT",
           "sections": [
@@ -329,7 +330,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     throw e
   }
 }
-handler.help = ['menu', 'help','list', '?']
+handler.help = ['menu','?']
 handler.tags = ['main']
 handler.command = /^(menu|help|\?)$/i
 handler.owner = false
