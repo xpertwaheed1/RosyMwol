@@ -35,7 +35,7 @@ Asena.addCommand({pattern: 'find', fromMe: true, desc: FIND_DESC }, (async (mess
             if (res === 'success') {
                 await message.client.sendMessage(message.jid, `Title: ${res.title}\nArtist: ${res.artist}`, MessageType.text);
             } else {
-                await message.client.sendMessage(message.jid, '*Song not found ...*', MessageType.text);
+                await message.client.sendMessage(message.jid, '*paattinte per kittiyilla ...*', MessageType.text);
             }
         }).catch((error) =>  {
             console.log(error);
@@ -71,7 +71,7 @@ else if (Config.WORKTYPE == 'public') {
             if (res === 'success') {
                 await message.client.sendMessage(message.jid, `Title: ${res.title}\nArtist: ${res.artist}`, MessageType.text);
             } else {
-                await message.client.sendMessage(message.jid, '*Song not found ...*', MessageType.text);
+                await message.client.sendMessage(message.jid, '*paattinte per kittiyilla ...*', MessageType.text);
             }
         }).catch((error) =>  {
             console.log(error);
