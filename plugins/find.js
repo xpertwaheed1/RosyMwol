@@ -24,7 +24,7 @@ Asena.addCommand({pattern: 'find', fromMe: true, desc: FIND_DESC }, (async (mess
     ffmpeg(filePath).format('mp3').save('music.mp3').on('end', async () => {
         form.append('api_token', '822e72c7422a16f94025b1416ce36cc0');
         form.append('file', fs.createReadStream('./music.mp3'));
-        form.append('return', 'apple_music, spotify');
+        form.append('return', 'apple_music, spotify, resso');
         var configs = {
             headers: {
                 ...form.getHeaders()
@@ -60,7 +60,7 @@ else if (Config.WORKTYPE == 'public') {
     ffmpeg(filePath).format('mp3').save('music.mp3').on('end', async () => {
         form.append('api_token', '822e72c7422a16f94025b1416ce36cc0');
         form.append('file', fs.createReadStream('./music.mp3'));
-        form.append('return', 'apple_music, spotify');
+        form.append('return', 'apple_music, spotify, resso');
         var configs = {
             headers: {
                 ...form.getHeaders()
