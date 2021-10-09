@@ -27,7 +27,7 @@ if (Config.WORKTYPE == 'private') {
             await message.client.sendMessage(message.jid,'RosyMwol created by *DEVILSER*' , MessageType.text);
         }
         else {
-            await message.client.sendMessage(message.jid,Config.OWNRN + '\n\n---------------------', MessageType.text);
+            await message.client.sendMessage(message.jid,Config.OWNRN + '\n\n wa.me/919656459062', MessageType.text);
         }
     }));
 }
@@ -45,7 +45,7 @@ else if (Config.WORKTYPE == 'public') {
             await message.client.sendMessage(message.jid,'RosyMwol created by *DEVILSER*' , MessageType.text);
         }
         else {
-            await message.client.sendMessage(message.jid,Config.OWNRN + '\n\n--------------------', MessageType.text);
+            await message.client.sendMessage(message.jid,Config.OWNRN + '\n\n wa.me/919656459062', MessageType.text);
         }
     }));
 }
