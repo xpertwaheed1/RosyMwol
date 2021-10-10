@@ -15,12 +15,12 @@ if (Config.WORKTYPE == 'private') {
 
     var r_text = new Array ();
 
-r_text[0] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/XXXTentacion-Wallpaper-HD.png";
-r_text[1] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/Wallpaper-XxxTentacion.jpg";
-r_text[2] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/Wallpapers-XxxTentacion.jpg";
-r_text[3] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/XxxTentacion-Wallpaper-Download.jpg";
-r_text[4] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/XxxTentacion-HD-Backgrounds.jpg";
-r_text[5] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/XxxTentacion-Wallpaper.jpg";
+r_text[0] = "https://raw.githubusercontent.com/devil-ser/devil-ser/main/Photos/xxxtentacion/IMG-20211009-WA0093.jpg";
+r_text[1] = "https://raw.githubusercontent.com/devil-ser/devil-ser/main/Photos/xxxtentacion/IMG-20211009-WA0094.jpg";
+r_text[2] = "https://raw.githubusercontent.com/devil-ser/devil-ser/main/Photos/xxxtentacion/IMG-20211009-WA0103.jpg";
+r_text[3] = "https://raw.githubusercontent.com/devil-ser/devil-ser/main/Photos/xxxtentacion/IMG-20211010-WA0188.jpg";
+r_text[4] = "https://raw.githubusercontent.com/devil-ser/devil-ser/main/Photos/xxxtentacion/IMG-20211010-WA0189.jpg";
+r_text[5] = "https://raw.githubusercontent.com/devil-ser/devil-ser/main/Photos/xxxtentacion/IMG_20211010_175947.jpg";
 
 var i = Math.floor(201*Math.random())
 
@@ -36,12 +36,12 @@ else if (Config.WORKTYPE == 'public') {
 
     var r_text = new Array ();
 
-r_text[0] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/XXXTentacion-Wallpaper-HD.png";
-r_text[1] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/Wallpaper-XxxTentacion.jpg";
-r_text[2] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/Wallpapers-XxxTentacion.jpg";
-r_text[3] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/XxxTentacion-Wallpaper-Download.jpg";
-r_text[4] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/XxxTentacion-HD-Backgrounds.jpg";
-r_text[5] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/XxxTentacion-Wallpaper.jpg";
+r_text[0] = "https://raw.githubusercontent.com/devil-ser/devil-ser/main/Photos/xxxtentacion/IMG-20211009-WA0093.jpg";
+r_text[1] = "https://raw.githubusercontent.com/devil-ser/devil-ser/main/Photos/xxxtentacion/IMG-20211009-WA0094.jpg";
+r_text[2] = "https://raw.githubusercontent.com/devil-ser/devil-ser/main/Photos/xxxtentacion/IMG-20211009-WA0103.jpg";
+r_text[3] = "https://raw.githubusercontent.com/devil-ser/devil-ser/main/Photos/xxxtentacion/IMG-20211010-WA0188.jpg";
+r_text[4] = "https://raw.githubusercontent.com/devil-ser/devil-ser/main/Photos/xxxtentacion/IMG-20211010-WA0189.jpg";
+r_text[5] = "https://raw.githubusercontent.com/devil-ser/devil-ser/main/Photos/xxxtentacion/IMG_20211010_175947.jpg";
 
 
     var i = Math.floor(201*Math.random())
