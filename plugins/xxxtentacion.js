@@ -11,7 +11,7 @@ const Config = require('../config');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'xxx', fromMe: true, desc: 'random xxx tentacion images'}, (async (message, match) => {
+    Asena.addCommand({pattern: 'tentacion', fromMe: true, desc: 'random tentacion images'}, (async (message, match) => {
 
     var r_text = new Array ();
 
@@ -226,7 +226,7 @@ var i = Math.floor(201*Math.random())
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'xxx', fromMe: false, desc:'random xxx tentacion images '}, (async (message, match) => {
+    Asena.addCommand({pattern: 'tentacion', fromMe: false, desc:'random tentacion images '}, (async (message, match) => {
 
     var r_text = new Array ();
 
