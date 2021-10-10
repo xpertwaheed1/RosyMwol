@@ -21,11 +21,6 @@ r_text[2] = "https://i.ibb.co/gRqPLNZ/32d036804e12b96c0c01c15fde4d4afd.jpg";
 r_text[3] = "https://i.ibb.co/BNHMyMR/20200319-100444-Copy-Copy-Copy-Copy.jpg";
 r_text[4] = "https://i.ibb.co/ckHytNP/20200402-201324-Copy-Copy-Copy.jpg";
 r_text[5] = "https://i.ibb.co/PT42NYJ/78354966c6869622f5a4b87eeba23686.jpg";
-r_text[6] = "https://i.ibb.co/f4y50Jf/20200402-201442-Copy-Copy.jpg";
-r_text[7] = "https://i.ibb.co/dGYPBP1/a-a-O-O-O-a-a-20200625-164032-Copy-Copy-Copy-Copy-Copy.jpg";
-r_text[8] = "https://i.ibb.co/TkF09V4/a-a-O-O-O-a-a-20200625-164105-Copy-Copy-Copy-Copy-Copy.jpg";
-r_text[9] = "https://i.ibb.co/ysnJPV6/a-a-O-O-O-a-a-20200625-164129-Copy-Copy-Copy-Copy-Copy.jpg";
-r_text[10] = "https://i.ibb.co/r0xrwNY/a-a-O-O-O-a-a-20200625-164148-Copy-Copy-Copy-Copy-Copy.jpg";
 
 var i = Math.floor(201*Math.random())
 
@@ -47,11 +42,6 @@ r_text[2] = "https://i.ibb.co/gRqPLNZ/32d036804e12b96c0c01c15fde4d4afd.jpg";
 r_text[3] = "https://i.ibb.co/BNHMyMR/20200319-100444-Copy-Copy-Copy-Copy.jpg";
 r_text[4] = "https://i.ibb.co/ckHytNP/20200402-201324-Copy-Copy-Copy.jpg";
 r_text[5] = "https://i.ibb.co/PT42NYJ/78354966c6869622f5a4b87eeba23686.jpg";
-r_text[6] = "https://i.ibb.co/f4y50Jf/20200402-201442-Copy-Copy.jpg";
-r_text[7] = "https://i.ibb.co/dGYPBP1/a-a-O-O-O-a-a-20200625-164032-Copy-Copy-Copy-Copy-Copy.jpg";
-r_text[8] = "https://i.ibb.co/TkF09V4/a-a-O-O-O-a-a-20200625-164105-Copy-Copy-Copy-Copy-Copy.jpg";
-r_text[9] = "https://i.ibb.co/ysnJPV6/a-a-O-O-O-a-a-20200625-164129-Copy-Copy-Copy-Copy-Copy.jpg";
-r_text[10] = "https://i.ibb.co/r0xrwNY/a-a-O-O-O-a-a-20200625-164148-Copy-Copy-Copy-Copy-Copy.jpg";
 
 
     var i = Math.floor(201*Math.random())
