@@ -15,12 +15,12 @@ if (Config.WORKTYPE == 'private') {
 
     var r_text = new Array ();
 
-r_text[0] = "https://i.ibb.co/Lpbn4yn/024eb6b7ed350a59d7c69cc2d20c628f.jpg";
-r_text[1] = "https://i.ibb.co/yBk8hwY/04ea393be2184b0a570f21623fe61ad5.jpg";
-r_text[2] = "https://i.ibb.co/gRqPLNZ/32d036804e12b96c0c01c15fde4d4afd.jpg";
-r_text[3] = "https://i.ibb.co/BNHMyMR/20200319-100444-Copy-Copy-Copy-Copy.jpg";
-r_text[4] = "https://i.ibb.co/ckHytNP/20200402-201324-Copy-Copy-Copy.jpg";
-r_text[5] = "https://i.ibb.co/PT42NYJ/78354966c6869622f5a4b87eeba23686.jpg";
+r_text[0] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/XXXTentacion-Wallpaper-HD.png";
+r_text[1] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/Wallpaper-XxxTentacion.jpg";
+r_text[2] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/Wallpapers-XxxTentacion.jpg";
+r_text[3] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/XxxTentacion-Wallpaper-Download.jpg";
+r_text[4] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/XxxTentacion-HD-Backgrounds.jpg";
+r_text[5] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/XxxTentacion-Wallpaper.jpg";
 
 var i = Math.floor(201*Math.random())
 
@@ -36,12 +36,12 @@ else if (Config.WORKTYPE == 'public') {
 
     var r_text = new Array ();
 
-r_text[0] = "https://i.ibb.co/Lpbn4yn/024eb6b7ed350a59d7c69cc2d20c628f.jpg";
-r_text[1] = "https://i.ibb.co/yBk8hwY/04ea393be2184b0a570f21623fe61ad5.jpg";
-r_text[2] = "https://i.ibb.co/gRqPLNZ/32d036804e12b96c0c01c15fde4d4afd.jpg";
-r_text[3] = "https://i.ibb.co/BNHMyMR/20200319-100444-Copy-Copy-Copy-Copy.jpg";
-r_text[4] = "https://i.ibb.co/ckHytNP/20200402-201324-Copy-Copy-Copy.jpg";
-r_text[5] = "https://i.ibb.co/PT42NYJ/78354966c6869622f5a4b87eeba23686.jpg";
+r_text[0] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/XXXTentacion-Wallpaper-HD.png";
+r_text[1] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/Wallpaper-XxxTentacion.jpg";
+r_text[2] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/Wallpapers-XxxTentacion.jpg";
+r_text[3] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/XxxTentacion-Wallpaper-Download.jpg";
+r_text[4] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/XxxTentacion-HD-Backgrounds.jpg";
+r_text[5] = "http://m.gettywallpapers.com/wp-content/uploads/2020/01/XxxTentacion-Wallpaper.jpg";
 
 
     var i = Math.floor(201*Math.random())
