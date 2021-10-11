@@ -19,7 +19,7 @@ Asena.addCommand({pattern: 'menu', fromMe: false, desc: Lang.WP}, (async (messag
 
     await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: `┏╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍┓
 
-            ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ
+            ROSY MWOL
 
 ┗╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍┛
 
