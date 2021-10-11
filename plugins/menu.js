@@ -8,7 +8,24 @@ const Lang = Language.getString('wallpaper');
 Asena.addCommand({pattern: 'menu', fromMe: false, desc: Lang.WP}, (async (message, match) => {
 
     var r_text = new Array ();
-    
+
+    key: {
+
+    fromMe: false,
+
+    participant: "0@s.whatsapp.net",
+
+    remoteJid: "status@broadcast"
+
+  },
+
+  message: {
+
+    "extendedTextMessage": {
+
+      "text": "ROSYMWOL"
+
+    }
     
     r_text[0] = "https://github.com/DEVILSER/Media/raw/main/image/logo.jpg";
     
@@ -119,24 +136,6 @@ Asena.addCommand({pattern: 'menu', fromMe: false, desc: Lang.WP}, (async (messag
 ┣𝕾⃝🎀 ᴜᴘᴅᴀᴛᴇ
 ┣𝕾⃝🎀 ᴜᴘᴅᴀᴛᴇ ɴᴏᴡ
 ┗╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
-
-  key: {
-
-    fromMe: false,
-
-    participant: "0@s.whatsapp.net",
-
-    remoteJid: "status@broadcast"
-
-  },
-
-  message: {
-
-    "extendedTextMessage": {
-
-      "text": "ROSYMWOL"
-
-    }
 
 `}) 
 
