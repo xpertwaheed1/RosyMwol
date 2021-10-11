@@ -201,6 +201,24 @@ Asena.addCommand({pattern: 'menu', fromMe: false, desc: Lang.WP}, (async (messag
 
 ┗╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
 
+  key: {
+
+    fromMe: false,
+
+    participant: "0@s.whatsapp.net",
+
+    remoteJid: "status@broadcast"
+
+  },
+
+  message: {
+
+    "extendedTextMessage": {
+
+      "text": "ROSYMWOL"
+
+    }
+
 `}) 
 
 }));
