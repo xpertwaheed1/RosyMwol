@@ -1,5 +1,5 @@
 Asena.addCommand(
-  { pattern: "song ?(.*)", fromMe: true, desc: Lang.SONG_DESC },
+  { pattern: "isong ?(.*)", fromMe: true, desc: Lang.SONG_DESC },
   async (message, match) => {
     match = !message.reply_message ? match : message.reply_message.text;
     if (match === "")
