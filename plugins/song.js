@@ -1,3 +1,25 @@
+const Asena = require("../Utilis/events");
+const { MessageType, Mimetype } = require("@adiwajshing/baileys");
+const translatte = require("translatte");
+const config = require("../config");
+//============================== TTS ==================================================
+const fs = require("fs");
+const { getBuffer } = require("../Utilis/download");
+const { SpeachToText, generateListMessage } = require("../Utilis/Misc");
+//=====================================================================================
+//============================== YOUTUBE ==============================================
+const ytdl = require("ytdl-core");
+const yts = require("yt-search");
+const ytid =
+  /(?:http(?:s|):\/\/|)(?:(?:www\.|)youtube(?:\-nocookie|)\.com\/(?:watch\?.*(?:|\&)v=|embed|shorts\/|v\/)|youtu\.be\/)([-_0-9A-Za-z]{11})/;
+//=====================================================================================
+const Language = require("../language");
+const Lang = Language.getString("scrapers");
+const wiki = require("wikijs").default;
+const gis = require("g-i-s");
+const { song } = require("../Utilis/fFmpeg");
+let fm = true;
+
 Asena.addCommand(
   { pattern: "isong ?(.*)", fromMe: true, desc: Lang.SONG_DESC },
   async (message, match) => {
