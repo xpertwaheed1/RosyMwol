@@ -22,7 +22,7 @@ module.exports = {
     ANTİLİNK: process.env.ANTİ_LİNK === undefined ? 'false' : process.env.ANTİ_LİNK,
     AUTOBİO: process.env.AUTO_BİO === undefined ? 'false' : process.env.AUTO_BİO,
     THERI_KICK: process.env.THERI_KICK === undefined ? 'false' : process.env.THERI_KICK,
-    JINN: process.env.ALL_CAPTION === undefined ? '```Made By ElsaMwol 😉```' : process.env.ALL_CAPTION,
+    JINN: process.env.ALL_CAPTION === undefined ? '```Made By RosyMwol 😉```' : process.env.ALL_CAPTION,
     WELCOME: process.env.WELCOME === undefined ? 'pp' : process.env.WELCOME,
     WEL_GIF: process.env.WEL_GIF === undefined ? 'https://i.imgur.com/nErXUGj.mp4' : process.env.WEL_GIF,
     GIF_BYE: process.env.GIF_BYE === undefined ? 'https://i.imgur.com/Z1jCYGN.mp4' : process.env.GIF_BYE,
