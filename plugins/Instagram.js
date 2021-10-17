@@ -4,8 +4,8 @@ const { getBuffer, igStory, downVideo } = require("../Utilis/download");
 const { instagram } = require("../Utilis/Misc");
 const Language = require("../language");
 const Lang = Language.getString("insta");
-Asena.addCommand(
-  {pattern: "insta ?(.*)",fromMe: true,desc: Lang.INSTA_DESC,},
+
+Asena.addCommand({pattern: "insta ?(.*)",fromMe: true,desc: Lang.INSTA_DESC,},
   
   async (message, match) => {
     match = !message.reply_message ? match : message.reply_message.text;
