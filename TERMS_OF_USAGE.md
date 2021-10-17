@@ -1,8 +1,8 @@
-# **ROSYMOWL** TERMS OF USAGE
+# **ELSAMOWL V-2.1** TERMS OF USAGE
 
 Last Updated: **GMT-3 22/03/2021**
 
-These terms of service ("Terms") apply to your access and use of **ROSYMWOL** Please read them carefully.
+These terms of service ("Terms") apply to your access and use of **PINKY V2** Please read them carefully.
 
 
 ## Accepting these Terms

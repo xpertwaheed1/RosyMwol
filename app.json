@@ -8,7 +8,7 @@
     "success_url": "under maintenance",
     "stack": "container",
     "env": {
-        "RosyMwol_SESSION": {
+        "ElsaMwol_SESSION": {
             "description": "Qr.Js Type here yours Asena Session.",
             "required": true
         },
@@ -24,7 +24,7 @@
          "BGM_FILTER": {
             "description": "If you likes bgm you can write 'true'. Otherwise false",
             "required": false,
-            "value": "true"
+            "value": "false"
         },   
         "ANTİ_LİNK": {
             "description": "Link Engelleme Sistemi. Link Blocking System.",
@@ -49,7 +49,7 @@
         "AUTO_BİO": {
             "description": "Set true for auto date, time in biography.",
             "required": true,
-            "value": "false"
+            "value": "true"
         },
         "OWNER_NAME": {
             "description": "reply for .owner ! give your details, Use => default, to change back.",
