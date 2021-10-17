@@ -4,7 +4,7 @@ PINKY V2
 
 const chalk = require('chalk');
 const {WAConnection, MessageOptions, MessageType} = require('@adiwajshing/baileys');
-const {StringSession} = require('./ElsaMwol/');
+const {StringSession} = require('./RosyMwol/');
 const fs = require('fs');
 
 async function whatsAsena () {
@@ -29,7 +29,7 @@ ${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please Wait.')}`);
         );
         
         if (!fs.existsSync('config.env')) {
-            fs.writeFileSync('config.env', `ElsaMowl_SESSION="${st}"`);
+            fs.writeFileSync('config.env', `RosyMowl_SESSION="${st}"`);
         }
         if (conn.user.jid.startsWith('90')) {
             await conn.sendMessage(conn.user.jid,st, MessageType.text)
