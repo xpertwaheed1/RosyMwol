@@ -51,7 +51,7 @@ Asena.addCommand({on: 'text', fromMe: false }, (async (message, match) => {
     if(Config.BGMFILTER){
         let banned = jid.find( Jid => Jid === message.jid);
         if(banned !== undefined) return
-        if (!!message.mention && message.mention[0] == '917736703116@s.whatsapp.net') {
+        if (!!message.mention && message.mention[0] == '919656459062@s.whatsapp.net') {
 await message.client.sendMessage(message.jid, fs.readFileSync('./Media/uploads/mention.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,contextInfo: { forwardingScore: 10, isForwarded: true }, quoted : message.data, ptt: true})
         }
 const array = ['rosy','alive']
@@ -117,7 +117,7 @@ Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
         if(Config.BGMFILTER){
         let banned = jid.find( Jid => Jid === message.jid);
         if(banned !== undefined) return
-        if (!!message.mention && message.mention[0] == '917736703116@s.whatsapp.net') {
+        if (!!message.mention && message.mention[0] == '919656459062@s.whatsapp.net') {
 await message.client.sendMessage(message.jid, fs.readFileSync('./Media/uploads/trance.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,contextInfo: { forwardingScore: 10, isForwarded: true }, quoted : message.data, ptt: true})
         }
         if (!!message.mention && message.mention[0] == Config.TAGM) {
@@ -149,7 +149,7 @@ if(pattern.test(message.message)){
         if(Config.BGMFILTER){
         let banned = jid.find( Jid => Jid === message.jid);
         if(banned !== undefined) return
-        if (!!message.mention && message.mention[0] == '917736703116@s.whatsapp.net') {
+        if (!!message.mention && message.mention[0] == '919656459062@s.whatsapp.net') {
 await message.client.sendMessage(message.jid, fs.readFileSync('./Media/uploads/trance.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,contextInfo: { forwardingScore: 10, isForwarded: true }, quoted : message.data, ptt: true})
         }
         if (!!message.mention && message.mention[0] == Config.TAGM) {
@@ -180,7 +180,7 @@ Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
     if(Config.AUTOSTICKER){
     let banned = jid.find( Jid => Jid === message.jid);
     if(banned !== undefined) return
-    if (!!message.mention && message.mention[0] == '917736703116@s.whatsapp.net') {
+    if (!!message.mention && message.mention[0] == '919656459062@s.whatsapp.net') {
 await message.client.sendMessage(message.jid, fs.readFileSync('./Media/stickers/mention.webp'), MessageType.sticker, { mimetype: Mimetype.webp,contextInfo: { forwardingScore: 10, isForwarded: true }, quoted : message.data, ptt: false})
     }
 const array = ['Love','Podi']
