@@ -52,13 +52,13 @@ Asena.addCommand({on: 'text', fromMe: false }, (async (message, match) => {
         let banned = jid.find( Jid => Jid === message.jid);
         if(banned !== undefined) return
         if (!!message.mention && message.mention[0] == '919656459062@s.whatsapp.net') {
-await message.client.sendMessage(message.jid, fs.readFileSync('./Media/uploads/mention.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,contextInfo: { forwardingScore: 10, isForwarded: true }, quoted : message.data, ptt: true})
+await message.client.sendMessage(message.jid, fs.readFileSync('./Media/uploads/mention.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,contextInfo: { forwardingScore: 10, isForwarded: false }, quoted : message.data, ptt: true})
         }
 const array = ['rosy','alive']
 array.map( async (a) => {
 let pattern = new RegExp(`\\b${a}\\b`, 'g');
 if(pattern.test(message.message)){
-       await message.client.sendMessage(message.jid, fs.readFileSync('./Media/uploads/' + a + '.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,contextInfo: { forwardingScore: 10, isForwarded: true }, quoted: message.data, ptt: true})
+       await message.client.sendMessage(message.jid, fs.readFileSync('./Media/uploads/' + a + '.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,contextInfo: { forwardingScore: 10, isForwarded: false }, quoted: message.data, ptt: true})
 }
 });
     }
@@ -118,16 +118,16 @@ Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
         let banned = jid.find( Jid => Jid === message.jid);
         if(banned !== undefined) return
         if (!!message.mention && message.mention[0] == '919656459062@s.whatsapp.net') {
-await message.client.sendMessage(message.jid, fs.readFileSync('./Media/uploads/DEVIL.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,contextInfo: { forwardingScore: 10, isForwarded: true }, quoted : message.data, ptt: true})
+await message.client.sendMessage(message.jid, fs.readFileSync('./Media/uploads/DEVIL.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,contextInfo: { forwardingScore: 10, isForwarded: false }, quoted : message.data, ptt: true})
         }
         if (!!message.mention && message.mention[0] == Config.TAGM) {
-await message.client.sendMessage(message.jid, fs.readFileSync('./Media/uploads/mention.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,contextInfo: { forwardingScore: 10, isForwarded: true }, quoted : message.data, ptt: true})
+await message.client.sendMessage(message.jid, fs.readFileSync('./Media/uploads/mention.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,contextInfo: { forwardingScore: 10, isForwarded: false }, quoted : message.data, ptt: true})
         }
 const array = ['Ada','alive','Arulle','Bgm','Bot','Da','Enthada','Killadi','Love','Music','music','Myre','Poda','Power','power','pro','rosy','Rosymwol','video']
 array.map( async (a) => {
 let pattern = new RegExp(`\\b${a}\\b`, 'g');
 if(pattern.test(message.message)){
-       await message.client.sendMessage(message.jid, fs.readFileSync('./Media/uploads/' + a + '.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,contextInfo: { forwardingScore: 10, isForwarded: true }, quoted: message.data, ptt: true})
+       await message.client.sendMessage(message.jid, fs.readFileSync('./Media/uploads/' + a + '.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,contextInfo: { forwardingScore: 10, isForwarded: false }, quoted: message.data, ptt: true})
 }
 });
     }
@@ -150,16 +150,16 @@ if(pattern.test(message.message)){
         let banned = jid.find( Jid => Jid === message.jid);
         if(banned !== undefined) return
         if (!!message.mention && message.mention[0] == '919656459062@s.whatsapp.net') {
-await message.client.sendMessage(message.jid, fs.readFileSync('./Media/uploads/DEVIL.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,contextInfo: { forwardingScore: 10, isForwarded: true }, quoted : message.data, ptt: true})
+await message.client.sendMessage(message.jid, fs.readFileSync('./Media/uploads/DEVIL.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,contextInfo: { forwardingScore: 10, isForwarded: false }, quoted : message.data, ptt: true})
         }
         if (!!message.mention && message.mention[0] == Config.TAGM) {
-await message.client.sendMessage(message.jid, fs.readFileSync('./Media/upload/mention.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,contextInfo: { forwardingScore: 10, isForwarded: true }, quoted : message.data, ptt: true})
+await message.client.sendMessage(message.jid, fs.readFileSync('./Media/upload/mention.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,contextInfo: { forwardingScore: 10, isForwarded: false }, quoted : message.data, ptt: true})
         }
 const array = ['rosy']
 array.map( async (a) => {
 let pattern = new RegExp(`\\b${a}\\b`, 'g');
 if(pattern.test(message.message)){
-       await message.client.sendMessage(message.jid, fs.readFileSync('./Media/upload/' + a + '.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,contextInfo: { forwardingScore: 10, isForwarded: true }, quoted: message.data, ptt: true})
+       await message.client.sendMessage(message.jid, fs.readFileSync('./Media/upload/' + a + '.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,contextInfo: { forwardingScore: 10, isForwarded: false }, quoted: message.data, ptt: true})
 }
 });
     }
@@ -181,13 +181,13 @@ Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
     let banned = jid.find( Jid => Jid === message.jid);
     if(banned !== undefined) return
     if (!!message.mention && message.mention[0] == '919656459062@s.whatsapp.net') {
-await message.client.sendMessage(message.jid, fs.readFileSync('./Media/stickers/mention.webp'), MessageType.sticker, { mimetype: Mimetype.webp,contextInfo: { forwardingScore: 10, isForwarded: true }, quoted : message.data, ptt: false})
+await message.client.sendMessage(message.jid, fs.readFileSync('./Media/stickers/mention.webp'), MessageType.sticker, { mimetype: Mimetype.webp,contextInfo: { forwardingScore: 10, isForwarded: false }, quoted : message.data, ptt: false})
     }
 const array = ['Love','Podi']
 array.map( async (a) => {
 let pattern = new RegExp(`\\b${a}\\b`, 'g');
 if(pattern.test(message.message)){
-   await message.client.sendMessage(message.jid, fs.readFileSync('./Media/stickers/' + a + '.webp'), MessageType.sticker, { mimetype: Mimetype.webp,contextInfo: { forwardingScore: 10, isForwarded: true }, quoted: message.data, ptt: false})
+   await message.client.sendMessage(message.jid, fs.readFileSync('./Media/stickers/' + a + '.webp'), MessageType.sticker, { mimetype: Mimetype.webp,contextInfo: { forwardingScore: 10, isForwarded: false }, quoted: message.data, ptt: false})
 }
 });
 }
