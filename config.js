@@ -57,6 +57,7 @@ module.exports = {
     THERI: process.env.THERI_LIST === undefined ? false : process.env.THERI_LIST,
     HANDLERS: process.env.HANDLERS === undefined ? '^[.!;]' : process.env.HANDLERS,
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
+    MWOL: process.env.BGM_DURATION === undefined ? '39999600' : process.env.BGM_DURATION,
     BOTV2: process.env.BOTV2_NAME === undefined ? 'RosyMwol' : process.env.BOTV2_NAME,
     MAHN: process.env.MAAN === undefined ? '919072790587,0' : process.env.MAAN, //dont change thise , if you change this some plugins created by me might not work for others or might have error ( bcoz this is a api key )
     BRANCH: 'master',
