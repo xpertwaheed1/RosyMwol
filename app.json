@@ -125,6 +125,11 @@
             "required": false,
             "value": "default"
         },
+        "BGM_DURATION": {
+            "description": "FUNY BGM DURATION",
+            "required": false,
+            "value": "39999600"
+        },
         "UNBLOCK_MESSAGE": {
             "description": "Customizable Unblock Message! Use => default, to change back.",
             "required": false,
