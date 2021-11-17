@@ -14,7 +14,7 @@ const Language = require('../language');
 const Lang = Language.getString('weather');
 const { errorMessage, infoMessage } = require('../helpers');
 
-Asena.addCommand({pattern: 'song ?(.*)', fromMe: false}, async (message, match) => {
+Asena.addCommand({pattern: 'Song ?(.*)', fromMe: false}, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_SONG);
 	const url = `https://tobz-api.herokuapp.com/api/joox?q=${match[1]}&apikey=BotWeA`;
 	try {
