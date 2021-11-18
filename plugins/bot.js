@@ -24,7 +24,7 @@ var afnplk = '```⏱ Time :' + plk_say + '```\n\n ```📅 Date :' + plk_here + '
       ]
       
       const buttonMessage = {
-          contentText: ' ENTHAADAA MWONE NOKKANEE ',
+          contentText: ' Test button ',
           footerText: '© ROSYMWOL',
           buttons: buttons,
           headerType: 1
