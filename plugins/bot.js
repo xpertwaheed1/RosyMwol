@@ -19,7 +19,7 @@ var plk_here = new Date().toLocaleDateString(get_localized_date)
 var afnplk = '```⏱ Time :' + plk_say + '```\n\n ```📅 Date :' + plk_here + '```'
 	const buttons = [
 
-        {buttonId: 'list', buttonText: {displayText: 'All commands'}, type: 1},
+        {buttonId: 'list', buttonText: {displayText: 'list'}, type: 1},
 
       ]
       
