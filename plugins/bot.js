@@ -19,13 +19,13 @@ var plk_here = new Date().toLocaleDateString(get_localized_date)
 var afnplk = '```⏱ Time :' + plk_say + '```\n\n ```📅 Date :' + plk_here + '```'
 	const buttons = [
 
-        {buttonId: 'list', buttonText: {displayText: 'list'}, type: 1},
+        {buttonId: 'list', buttonText: 'list', {displayText: 'list'}, type: 1},
 
       ]
       
       const buttonMessage = {
-          contentText: ' Test button ',
-          footerText: '© ROSYMWOL',
+          contentText: ' ROSYMWOL WHATSAPP BOT \n\n MADE WITH ❤️  ',
+          footerText: '© ꪶᴅᴇᴠɪʟꜱᴇʀꫂ',
           buttons: buttons,
           headerType: 1
       }
