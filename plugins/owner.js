@@ -16,7 +16,7 @@ const Lang = Language.getString('system_stats');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'owner', fromMe: true, desc: 'shows the detail of bot owner'}, (async (message, match) => {
+    Asena.addCommand({pattern: 'Owner', fromMe: true, desc: 'shows the detail of bot owner'}, (async (message, match) => {
 
         if (message.jid === '15369524516-1612300121@g.us') {
 
@@ -34,7 +34,7 @@ if (Config.WORKTYPE == 'private') {
 
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'owner', fromMe: false, desc: 'shows the detail of bot owner'}, (async (message, match) => {
+    Asena.addCommand({pattern: 'Owner', fromMe: false, desc: 'shows the detail of bot owner'}, (async (message, match) => {
 
         if (message.jid === '54218542512-1612300121@g.us') {
 
