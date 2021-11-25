@@ -28,7 +28,7 @@ var afnplk = '```⏱ Time :' + plk_say + '```\n\n ```📅 Date :' + plk_here + '
           contentText: ' ROSYMWOL WHATSAPP BOT \n\n MADE WITH ❤️  ',
           footerText: '© ꪶᴅᴇᴠɪʟꜱᴇʀꫂ',
           buttons: buttons,
-          headerType: 1
+          headerType: 4
       }
       
       await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
